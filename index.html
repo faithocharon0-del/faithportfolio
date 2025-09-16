@@ -1,0 +1,164 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <!-- Link to Tailwind CSS (you might need to install it via npm and configure) -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+  /* Custom CSS for transitions and hiding sections */
+  .section {
+  display: none; /* Initially hide all sections */
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateY(20px); /* Slight offset when hidden */
+  }
+  .section.active {
+  display: block; /* Show active section */
+  opacity: 1;
+  transform: translateY(0); /* Slide up */
+  }
+  </style>
+ </head>
+ <body class="bg-gray-100">
+  <!-- Navigation Bar -->
+  <nav class="bg-white shadow-md">
+  <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+  <div class="text-2xl font-semibold">
+  <!-- Brand Logo/Name -->
+  My Brand
+  </div>
+  <div class="hidden md:flex space-x-4">
+  <!-- Desktop Navigation Links -->
+  <a href="#home" class="hover:text-gray-500">Home</a>
+  <a href="#about" class="hover:text-gray-500">About</a>
+  <a href="#projects" class="hover:text-gray-500">Projects</a>
+  <a href="#contact" class="hover:text-gray-500">Contact</a>
+  </div>
+  <button class="md:hidden">
+  <!-- Mobile Menu Button (Hamburger Icon) -->
+  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+  </svg>
+  </button>
+  </div>
+  </nav>
+  <!-- Main Content -->
+  <div class="container mx-auto py-10">
+  <!-- Home Section -->
+  <section id="home" class="section active">
+  <!-- Hero Section -->
+  <div class="bg-gradient-to-br from-blue-100 to-blue-300 py-20 rounded-lg shadow-xl text-center">
+  <div class="container mx-auto px-4">
+  <img src="placeholder-image.jpg" alt="Profile" class="rounded-full mx-auto mb-8 w-48 h-48 object-cover border-4 border-white shadow-md">
+  <h1 class="text-5xl font-bold text-gray-800 mb-4">Hello, I'm Faith R Ocharon</h1>
+  <p class="text-xl text-gray-700 mb-8">A passionate Infornation  technology student eager to learne and collaborate.</p>
+  <a href="#about" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300">
+  Learn More About Me
+  </a>
+  </div>
+  </div>
+  </section>
+  <!-- About Section -->
+  <section id="about" class="section">
+  <div class="bg-white rounded-lg shadow-md p-8">
+  <h2 class="text-3xl font-semibold mb-6">A Working student</h2>
+  <!-- Professional Introduction -->
+  <div class="mb-6">
+  <h3 class="text-xl font-semibold mb-2">Professional Introduction</h3>
+  <p class="text-gray-700">
+   "I am a highly motivated and detail-oriented software engineer with a passion for developing innovative and user-friendly applications.  With 1 yearof experience in Cashier, I am eager to contribute my skills to a challenging and rewarding environment."]
+  </p>
+  </div>
+  <!-- Skills List -->
+  <div class="mb-6">
+  <h3 class="text-xl font-semibold mb-2">Skills</h3>
+  <ul class="list-disc list-inside text-gray-700">
+  <li>Good Communication Skill</li>
+  <li> Problem Solving </li>
+  
+  
+  <!-- Add more skills as needed -->
+  </ul>
+  </div>
+  <!-- Work Experience Timeline -->
+  <div class="mb-6">
+  <h3 class="text-xl font-semibold mb-2">Work Experience</h3>
+  <div class="relative">
+  <!-- Job 1 -->
+  <div class="mb-4">
+  <h4 class="font-semibold">"Cashier"</h4>
+  <p class="text-gray-700">Kcc Mall de Zambonga | October 30,2022 - July 30 ,2023</p>
+
+  </div>
+  </div>
+  </div>
+  <!-- Education Background -->
+  <div>
+  <h3 class="text-xl font-semibold mb-2">Education</h3>
+  <div class="mb-4">
+  <h4 class="font-semibold">3 years Diploma techonology</h4>
+  <p class="text-gray-700"> ZPPSU| July 30 ,2025</p>
+  <p class="text-gray-700">Information techonology</p>
+  </div>
+  <!-- Add more education entries if applicable -->
+  </div>
+  </div>
+  </section>
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+  <!-- Project showcase area -->
+  <h2 class="text-3xl font-semibold mb-4">Projects</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+  <!-- Project Cards -->
+  <div class="bg-white rounded-lg shadow-md p-4">
+  <h3>Project 1</h3>
+  <p>Description and technology tags</p>
+  </div>
+  <div class="bg-white rounded-lg shadow-md p-4">
+  <h3>Project 2</h3>
+  <p>Description and technology tags</p>
+  </div>
+  <div class="bg-white rounded-lg shadow-md p-4">
+  <h3>Project 3</h3>
+  <p>Description and technology tags</p>
+  </div>
+  </div>
+  </section>
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+  <!-- Contact information and contact form -->
+  <h2 class="text-3xl font-semibold mb-4">Contact Me</h2>
+  <p>Contact information (email, phone, location)</p>
+  <form>
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name"><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email"><br>
+  <label for="message">Message:</label><br>
+  <textarea id="message" name="message"></textarea><br><br>
+  <input type="submit" value="Submit">
+  </form>
+  </section>
+  </div>
+  <script>
+  // JavaScript to handle section transitions
+  const sections = document.querySelectorAll('.section');
+  const navLinks = document.querySelectorAll('nav a');
+  function showSection(id) {
+  sections.forEach(section => section.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  }
+  navLinks.forEach(link => {
+  link.addEventListener('click', function(event) {
+  event.preventDefault();
+  const sectionId = this.getAttribute('href').substring(1);
+  showSection(sectionId);
+  });
+  });
+  // Show the initial section (Home)
+  showSection('home');
+  </script>
+ </body>
+ </html>
